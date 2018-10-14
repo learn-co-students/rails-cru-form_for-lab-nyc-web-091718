@@ -1,0 +1,14 @@
+<h1><%= @song.name %></h1>
+
+<h3>Artist:</h3>
+<p><%= link_to @song.artist.name, @song.artist %></p>
+
+<h3>Genre:</h3>
+<p><%= link_to @song.genre.name, @song.genre %></p>
+
+
+<br>
+<h4>What else would you like to do?</h4>
+<%= link_to "Edit song", action: "edit"%><br><br>
+
+<%= link_to "Back to all songs", action: "index"%>
