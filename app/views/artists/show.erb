@@ -1,0 +1,18 @@
+<h1><%= @artist.name %></h1>
+
+<p>Bio: <%= @artist.bio %></p>
+
+<h2><%= @artist.name %>'s Songs</h2>
+<% @songs.uniq.each do |song| %>
+  <%= link_to song.name, song_path(song) %><br>
+<% end %>
+
+<h2><%= @artist.name %>'s Genres</h2>
+<% @genres.uniq.each do |genre| %>
+  <%= link_to genre.name, genre_path(genre) %><br>
+<% end %>
+
+<h2>Navigation Links</h2>
+
+<%= link_to "Artist Index", artists_path %><br>
+<%= link_to "Edit Artist", edit_artist_path %><br>
