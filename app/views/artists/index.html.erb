@@ -1,0 +1,11 @@
+<h2>All Artists</h2>
+<h3>These are all the artists in your libary.</h3>
+
+<% @artists.each do |artist| %>
+  <div><%= link_to artist.name, artist %></div>
+<% end %>
+
+
+<br>
+<h4>What would you like to do?</h4>
+<%= link_to "Create a new artist", action: "new"%>

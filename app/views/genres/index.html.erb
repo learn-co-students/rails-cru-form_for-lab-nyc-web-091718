@@ -1,0 +1,11 @@
+<h2>All Genres</h2>
+<h3>These are all the genres in your libary.</h3>
+
+<% @genres.each do |genre| %>
+  <div><%= link_to genre.name, genre %></div>
+<% end %>
+
+
+<br>
+<h4>What would you like to do?</h4>
+<%= link_to "Create a new genre", action: "new"%>
