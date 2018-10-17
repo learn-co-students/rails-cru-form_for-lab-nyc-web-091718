@@ -1,0 +1,10 @@
+<h1> <%= @artist.name %> </h1>
+<p> <%= @artist.bio %> </p>
+<h3> Songs associated with <%=@artist.name%><h3> 
+
+
+<% Song.all.each_with_index do |song, i| %>
+  <% if song.artist_id == @artist.id %>
+    <div><%= i %> - <%= link_to song.name, song_path(song) %></div><br>
+  <% end %>
+<% end %>
