@@ -1,0 +1,7 @@
+<h1> <%= @genre.name %> </h1>
+<h3> Songs associated with <%=@genre.name%><h3> 
+<% Song.all.each_with_index do |song, i| %>
+  <% if song.genre_id == @genre.id %>
+    <div><%= i %> - <%= link_to song.name, song_path(song) %></div>
+  <% end %>
+<% end %>

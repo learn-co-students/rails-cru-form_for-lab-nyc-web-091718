@@ -9,6 +9,12 @@
 
 ## Instructions
 
+rails g controller artists edit new show --no-test-framework
+rails g controller songs index edit new show --no-test-framework
+rails g controller genres edit new show --no-test-framework
+
+
+
 You've been tasked with building a Rails app called **Beats by Rails**, the app will need to have three separate models:
 
 * Songs
